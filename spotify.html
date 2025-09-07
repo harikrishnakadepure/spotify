@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="utillity.css" />
+    <link rel="stylesheet" href="mediaq.css" />
+    <link rel="stylesheet" href="cards.css" />
+    <link rel="stylesheet" href="login.css" />
+
+    <link rel="icon" href="data:," />
+  </head>
+  <body>
+    <div class="container flex bg-grey">
+      <div class="left border bg-black">
+        <div class="home bg-grey rounded m-1 p-1">
+          <div class="logo">
+            <img class="" src="logo.svg" alt="logo" />
+            <p>spotify</p>
+          </div>
+          <ul>
+            <li>
+              <img class="invert" src="home.svg" alt="home" />
+              <p>home</p>
+            </li>
+            <li>
+              <img
+                id="searchSvg"
+                class="invert"
+                src="search.svg"
+                alt="search"
+              />
+              <p>search</p>
+            </li>
+          </ul>
+        </div>
+        <div class="library bg-grey rounded m-1 p-1">
+          <div class="heading">
+            <div class="playlist invert">
+              <img src="library.svg" alt="playlist" />
+            </div>
+
+            <h4>Your library</h4>
+            <div class="plussvg invert"><img src="plus.svg" alt="plus" /></div>
+          </div>
+          <div class="songlist">
+            <ul>
+              <!-- <li>
+                <div class="leftsonginfo">
+                  <div class="musicsvg invert">
+                    <img src="musicsvg.svg" alt="musicsvg" />
+                  </div>
+                  <div class="songinfo">
+                    <div>songname</div>
+                    <div>song artist</div>
+                  </div>
+                </div>
+
+                <div class="playnowsong">
+                  <span>playnow</span>
+                  <img class="invert" src="playnowsong.svg" alt="playnowsong" />
+                </div>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+        <div class="footermain">
+          <div class="footer">
+            <div>
+              <a href="https://www.spotify.com/in-en/legal/">Legal</a>
+            </div>
+            <div>
+              <a href="https://www.spotify.com/in-en/safetyandprivacy/"
+                >Safety & Privacy Center</a
+              >
+            </div>
+            <div>
+              <a href="https://www.spotify.com/in-en/legal/privacy-policy/"
+                >Privacy Policy</a
+              >
+            </div>
+            <div>
+              <a href="https://www.spotify.com/in-en/legal/cookies-policy/"
+                >Cookies</a
+              >
+            </div>
+            <div>
+              <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3"
+                >About Ads</a
+              >
+            </div>
+            <div>
+              <a href="https://www.spotify.com/in-en/accessibility/"
+                >Accessibility</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right border bg-grey rounded">
+        <div class="headerright">
+          <div class="navright">
+            <div class="leftsvg invert">
+              <img src="leftarrow.svg" alt="leftarrow" />
+            </div>
+            <div class="rightsvg invert">
+              <img src="right.svg" alt="rightarrow" />
+            </div>
+          </div>
+          <!-- <div class="button">
+            <button>Signup</button>
+            <button>Login</button>
+          </div> -->
+
+          <div class="auth-container">
+            <button class="btn login-btn">Login</button>
+            <button class="btn signup-btn">Signup</button>
+          </div>
+
+          <!-- Login Modal -->
+          <div class="modal login-modal">
+            <div class="modal-card">
+              <span class="close">&times;</span>
+              <h2>Login</h2>
+              <form>
+                <input type="email" placeholder="Email" required />
+                <input type="password" placeholder="Password" required />
+                <button class="btn" type="submit">Login</button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Signup Modal -->
+          <div class="modal signup-modal">
+            <div class="modal-card">
+              <span class="close">&times;</span>
+              <h2>Signup</h2>
+              <form>
+                <input type="text" placeholder="Full Name" required />
+                <input type="email" placeholder="Email" required />
+                <input type="password" placeholder="Password" required />
+                <button class="btn" type="submit">Signup</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="spotify-playlist">
+          <!-- /*added search bar*/ -->
+          <div class="search-bar hidden">
+            <input
+              type="text"
+              id="songSearch"
+              placeholder="Search for songs..."
+              autocomplete="off"
+            />
+            <div id="searchResults" class="search-results"></div>
+          </div>
+
+          <h1>spotify playlist</h1>
+          <div class="scroll-wrapper">
+            <button class="scroll-btn left">
+              <!-- ⬅️ Your left SVG here -->
+              <img src="leftarrow.svg" alt="" />
+            </button>
+            <div class="card-container">
+              <div class="card">
+                <div class="play">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                    ></path>
+                  </svg>
+                </div>
+
+                <img
+                  src="https://i.scdn.co/image/ab67616d00001e02fb7891b805802181ddf4106c"
+                  alt="saiyarra"
+                />
+                <h3>kishor kumar-old version</h3>
+                <p>kishor kumar</p>
+              </div>
+              <div class="card">
+                <div class="play">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                    ></path>
+                  </svg>
+                </div>
+
+                <img
+                  src="images\arijit.webp"
+                  alt="saiyarra"
+                />
+                <h3>Arijit hits</h3>
+                <p>arijit singh</p>
+              </div>
+              <div class="card">
+                <div class="play">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                    ></path>
+                  </svg>
+                </div>
+
+                <img src="images\arrehman.jpg" alt="saiyarra" />
+                <h3>Ar rehman</h3>
+                <p></p>
+              </div>
+              <div class="card">
+                <div class="play">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                    ></path>
+                  </svg>
+                </div>
+
+                <img src="images\alan walker.jpg" alt="saiyarra" />
+                <h3>alan walkar</h3>
+                <p></p>
+              </div>
+              <div class="card">
+                <div class="play">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                    ></path>
+                  </svg>
+                </div>
+
+                <img src="images\anuv jain.jpg" alt="saiyarra" />
+                <h3>anuv jain</h3>
+                <p></p>
+              </div>
+              <div class="card">
+                <div class="play">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                    ></path>
+                  </svg>
+                </div>
+
+                <img src="images\armanmalik.jpg" alt="saiyarra" />
+                <h3>Arman malik</h3>
+                <p></p>
+              </div>
+              <div class="card">
+                <div class="play">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                    ></path>
+                  </svg>
+                </div>
+
+                <img src="images\atif.jpg" alt="saiyarra" />
+                <h3>Atif aslam</h3>
+                <p></p>
+              </div>
+              <div class="card">
+                <div class="play">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                    ></path>
+                  </svg>
+                </div>
+
+                <img src="images\gururandwha.jpg" alt="saiyarra" />
+                <h3>GURU</h3>
+                <p></p>
+              </div>
+              <div class="card">
+                <div class="play">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                    ></path>
+                  </svg>
+                </div>
+
+                <img src="images\jubin.jpg" alt="saiyarra" />
+                <h3>Jubin nautiyal</h3>
+                <!-- <p>kishor kumar</p> -->
+              </div>
+              <div class="card">
+                <div class="play">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                    ></path>
+                  </svg>
+                </div>
+
+                <img src="images\justinbeiber.jpg" alt="saiyarra" />
+                <h3>Justin beiber</h3>
+                <!-- <p>arijit sing</p> -->
+              </div>
+              <div class="card">
+                <div class="play">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                    ></path>
+                  </svg>
+                </div>
+
+                <img src="images\kailesh kher.jpg" alt="saiyarra" />
+                <h3>Kailsh kher</h3>
+                <p></p>
+              </div>
+              <div class="card">
+                <div class="play">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                    ></path>
+                  </svg>
+                </div>
+
+                <img src="images\latamangeshkar.jpg" alt="saiyarra" />
+                <h3>lata mangeshkar</h3>
+                <p></p>
+              </div>
+              <div class="card">
+                <div class="play">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                    ></path>
+                  </svg>
+                </div>
+
+                <img src="images\nusrat.jpg" alt="saiyarra" />
+                <h3>nusrat khan</h3>
+                <!-- <p>kishor kumar</p> -->
+              </div>
+              <div class="card">
+                <div class="play">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                    ></path>
+                  </svg>
+                </div>
+
+                <img src="images\shreyaghoshal.jpg" alt="saiyarra" />
+                <h3>Shreya ghoshal</h3>
+                <p></p>
+              </div>
+              <div class="card">
+                <div class="play">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                    ></path>
+                  </svg>
+                </div>
+
+                <img
+                  src="https://i.scdn.co/image/ab67616d00001e02fb7891b805802181ddf4106c"
+                  alt="saiyarra"
+                />
+                <h3>kishor kumar-old version</h3>
+                <p>kishor kumar</p>
+              </div>
+              <div class="card">
+                <div class="play">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                    ></path>
+                  </svg>
+                </div>
+
+                <img
+                  src="https://i.scdn.co/image/ab67616d00001e02627b5b17cb48f6e6956b842e"
+                  alt="saiyarra"
+                />
+                <h3>Arijit hits</h3>
+                <p>arijit singh</p>
+              </div>
+            </div>
+            <button class="scroll-btn right">
+              <!-- ➡️ Your right SVG here -->
+              <img src="right.svg" alt="" />
+            </button>
+          </div>
+
+          <div class="studio">
+            <img  src="logo.svg" alt="spotify" />
+            <a  href="https://share.google/2QVstAGO3bFIdpb63">spotify</a>
+          </div>
+        </div>
+
+        <div class="playbar">
+          <div class="seekbar">
+            <div class="cir"></div>
+          </div>
+          <div class="song-info"></div>
+          <div class="songbuttons invert">
+            <img id="previous" src="previousplay.svg" alt="" />
+            <img id="play" src="pause.svg" alt="" />
+            <img id="next" src="nextplay.svg" alt="" />
+          </div>
+          <div class="song-time"></div>
+        </div>
+      </div>
+    </div>
+    <script src="newjs.js"></script>
+    <script src="login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,349 @@
+.card h3 {
+    /* font-family: "Underdog", system-ui; */
+    font-family: "Nata Sans", sans-serif;
+}
+
+/* General container */
+.spotify-playlist {
+    font-family: "Poppins", sans-serif;
+    padding: 1rem;
+    background: linear-gradient(135deg, #191414, #4a5a51);
+    min-height: 91vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    justify-content: center;
+
+    gap: 1rem;
+    
+}
+
+/* Playlist Title */
+.spotify-playlist h1 {
+    /* position: fixed; */
+    font-size: 20px;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Card container */
+.card-container {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 64vw;
+    padding: 1rem 2rem;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+}
+.scroll-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+.scroll-btn {
+    background: #1db954;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    z-index: 5;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+  }
+  
+  .scroll-btn:hover {
+    opacity: 1;
+  }
+  
+  .scroll-btn.left {
+    left: 0;
+    
+  }
+  
+  .scroll-btn.right {
+    right: 0;
+  }
+.card-container::-webkit-scrollbar {
+    height: 8px; /* horizontal scrollbar thickness */
+  }
+  
+  .card-container::-webkit-scrollbar-thumb {
+    background: #1db954; /* green scrollbar thumb */
+    border-radius: 10px;
+  }
+  
+  .card-container::-webkit-scrollbar-track {
+    background: #191414; /* dark background */
+  }
+
+/* Individual card */
+.card {
+    background: rgba(27, 27, 27, 0.897);
+    border-radius: 20px;
+    min-width: 220px;
+    height: 300px;
+    /* padding: 5px 5px 5px 5px ; */
+    padding: 20px 0px 23px 0px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Card hover effects */
+.card:hover {
+    transform: translateY(5px) scale(1);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Image style */
+.card img {
+    width: 80%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Zoom effect on hover */
+/* .card:hover img {
+    transform: scale(1.1);
+} */
+
+/* Card text */
+.card h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: #fff;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #ddd;
+    line-height: 1.4;
+}
+
+/* Add glowing border animation */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 2px;
+    background: linear-gradient(45deg, #1db954, #1ed760, #1db954);
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: glowing 3s linear infinite;
+}
+
+@keyframes glowing {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.play {
+    width: 50px;
+    height: 50px;
+    background-color: #1db954;
+    /* Spotify green */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    top: 186px;
+    right: 24px;
+    opacity: 1;
+    transition: all 1s ease-out;
+}
+
+.play svg {
+    width: 24px;
+    height: 24px;
+    fill: black;
+    /* triangle color */
+}
+
+
+.card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+  }
+  
+  .card .play {
+    position: absolute;
+    top: 80%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    background: #1db954; /* Spotify green background */
+    border-radius: 50%;
+    padding: 10px;
+    display: none; /* hidden by default */
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .card .play svg {
+    width: 24px;
+    height: 24px;
+    fill: black;
+  }
+  
+  .card:hover .play {
+    display: flex; /* show on hover */
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+
+
+
+
+
+
+/* responsive  */
+
+/* ---------- MOBILE (<=500px) RESPONSIVE PATCH ---------- */
+@media (max-width: 500px) {
+  /* Layout: stack left + right */
+  .container {
+    flex-direction: column;
+    align-items: stretch;
+    min-width: 100vw;
+  }
+
+  .left, .right {
+    width: 100% !important;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .left {
+    order: 0;
+    height: auto;
+    padding: 8px;
+    margin-bottom: 8px;
+  }
+
+  .right {
+    order: 1;
+    padding: 0;
+    min-height: unset;
+    display: block;
+  }
+
+  /* Header */
+  .headerright {
+    height: auto;
+    padding: 10px;
+    align-items: center;
+    gap: 8px;
+  }
+  .leftsvg img, .rightsvg img {
+    width: 26px;
+    height: auto;
+  }
+
+  /* Logo & nav shrink */
+  .logo {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  .logo img {
+    width: 40px;
+    height: auto;
+  }
+  .logo p {
+    font-size: 1.1rem;
+    margin-left: 4px;
+  }
+
+  /* Left nav list sizing */
+  .home ul li {
+    gap: 10px;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  /* Library / song list */
+  .songlist {
+    max-height: 40vh;
+    overflow-y: auto;
+  }
+  .songlist ul li {
+    min-height: 6vh;
+    padding: 8px;
+    gap: 12px;
+    flex-direction: row;
+  }
+  .songinfo div:first-child { font-size: 0.95rem; }
+  .songinfo div:last-child { font-size: 0.8rem; color: #9e9e9e; }
+
+  /* Spotify playlist container */
+  .spotify-playlist {
+    min-height: auto;
+    padding: 0.8rem;
+    gap: 0.8rem;
+    justify-content: flex-start;
+    min-width: -webkit-fill-available;
+  }
+  .spotify-playlist h1 {
+    font-size: 1rem;
+    margin: 0.6rem 0;
+  }
+  .scroll-btn.left {
+    left: 0;
+    max-width: 5vw;
+    
+  }
+  
+  .scroll-btn.right {
+    right: 0;
+    max-width: 5vw;
+  }
+
+
+  .right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  /* Card container: make cards smaller and horizontally scrollable */
+  
+}
+/* ---------- end mobile patch ---------- */
+
+  

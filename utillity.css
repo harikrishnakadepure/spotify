@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.border{
+    border: 1px solid black;
+    margin: 2px;
+}
+.flex{
+    display: flex;
+}
+.items-center{
+    align-items: center;
+}
+.justify-content{
+    justify-content: center;
+}
+.bg-black{
+    background-color: black;
+    color: azure;
+}
+.invert{
+    filter: invert(1);
+} 
+.bg-grey{
+    background-color: #111111;
+}
+.rounded{
+    border-radius: 7px;
+}
+.m-1{
+    margin: 5px;
+}
+.p-1{
+    padding: 10px;
+}
+
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  height: 6px;             /* horizontal scrollbar height */
+  width: 6px;              /* vertical scrollbar width */
+  background: #1e1b1a;     /* track background */
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar-thumb {
+  background:#1e1b1a ;     /* black thumb */
+  border-radius: 10px;     /* rounded edges */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #222;        /* slightly lighter on hover */
+}
+
+::-webkit-scrollbar-corner {
+  background: #1e1b1a;     /* scrollbar corner */
+}
+
+/* Firefox */
+.card-container{
+    scroll-behavior: smooth;
+    
+  scrollbar-width: thin;               
+  scrollbar-color:  #1e1b1a transparent;    
+}
+::-webkit-scrollbar-button {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+
+ 

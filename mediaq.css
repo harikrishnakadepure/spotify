@@ -1,0 +1,88 @@
+@media (max-width:560px) {
+    .button button {
+        padding: 10px 14px;
+        border: none;
+        border-radius: 8px;
+        background: black;
+        color: rgb(0, 255, 149);
+        box-shadow: 1px 1px 3px #0ff;
+        cursor: pointer;
+        transition: 0.3s;
+        font-family: "Poppins", sans-serif;
+    }
+
+
+
+    .button {
+        display: flex;
+        flex-direction: column;
+        width: 20vw;
+        height: 20vh;
+    }
+
+    .leftsvg img {
+        width: 10vw;
+    }
+
+    .rightsvg img {
+        width: 10vw;
+    }
+
+
+    .headerright {
+        height: auto;
+    }
+
+    .logo p {
+        font-size: 2vh;
+    }
+
+    .home ul li p {
+        font-size: 3vw;
+    }
+
+    .logo img {
+        width: 8vw;
+
+    }
+
+    .home ul li {
+        width: 22px;
+        list-style: none;
+        display: flex;
+        gap: 12px;
+        padding: 1px;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .home {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card {
+        background: rgba(27, 27, 27, 0.897);
+        border-radius: 20px;
+        max-width: 250px;
+        height: 40px;
+        /* padding: 5px 5px 5px 5px ; */
+        padding: 20px 0px 23px 0px;
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+        backdrop-filter: blur(12px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .card h3 {
+        font-size: 2vh;
+        font-size: 2vw;
+        margin: 0.5rem 0;
+        color: #fff;
+
+
+    }
+}
